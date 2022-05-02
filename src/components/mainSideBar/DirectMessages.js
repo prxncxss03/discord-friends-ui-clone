@@ -1,9 +1,12 @@
 import offline from '../../images/offline.png';
+import { Tooltip } from '../Tooltip.js';
 
 export const DirectMessages = () => {
     return (
         <div className='mx-2'>
-            <DirectMessagesline/>
+            <DirectMessagesline>
+            </DirectMessagesline>
+            <Tooltip tooltipText={'Create DM'} />
             <DirectMessagesPersons gender="male" alt="male avatar" text="iambooo3"/>
             <DirectMessagesPersons gender="bottts" alt="bottts" text="SummerXX"/>
             <DirectMessagesPersons gender="initials" alt="avatar" text="sis kaye"/>
@@ -31,9 +34,9 @@ const DirectMessagesPersons = ({gender, alt, text}) => {
                 </div>
                 <span className='ml-3 group-hover:text-gray-400 text-gray-420 text-sm font-semibold'>{text}</span>
             </div>
-            <button className='mr-1'>
+            <span className='mr-1'>
                 <svg className='opacity-0 group-hover:opacity-100' aria-hidden="false" width="16" height="16" viewBox="0 0 24 24"><path fill="#96989D" d="M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z"></path></svg>
-            </button>
+            </span>
         </button>
     )
 }
@@ -42,7 +45,7 @@ const DirectMessagesline = () => {
     return (
         <div className='text-gray-420 mx-3 mt-1 flex justify-between items-center'>
             <span className='text-xs hover:text-gray-400'>DIRECT MESSAGES</span>
-            <button className='text-xl text-gray-400'>+</button>
+            <button className='text-xl text-gray-400 relative'>+</button>
         </div>
     )
 }
