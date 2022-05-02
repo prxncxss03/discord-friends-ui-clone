@@ -41,7 +41,7 @@ const DirectMessagesPersons = ({gender, alt, text}) => {
 const DirectMessagesline = () => {
     return (
         <div className='text-gray-420 mx-3 mt-1 flex justify-between items-center'>
-            <span className='text-xs'>DIRECT MESSAGES</span>
+            <span className='text-xs hover:text-gray-400'>DIRECT MESSAGES</span>
             <button className='text-xl text-gray-400'>+</button>
         </div>
     )

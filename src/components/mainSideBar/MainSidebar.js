@@ -47,10 +47,10 @@ const MainSearchBar = () => {
 const MainSelectWrapper = ({mainSelect1,mainSelect2}) => {
     return (
         <div className=" m-2 flex flex-col ">
-            <div className=" m-1px bg-gray-650 text-white rounded-md">
+            <div className="hover:bg-gray-700 shadow-def m-1px bg-gray-650 text-white rounded-md">
                 {mainSelect1}
             </div>
-            <div className="flex justify-between text-gray-420 bg-gray-700 rounded-md">
+            <div className="hover:bg-gray-650 flex justify-between text-gray-420 bg-gray-700 rounded-md">
                 {mainSelect2}
                 <img className = "object-contain translate-y-2 mr-2"  src={flag} alt="wumpus flag"/>
             </div>
