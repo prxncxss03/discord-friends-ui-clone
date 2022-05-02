@@ -6,7 +6,7 @@ import deafen from '../../images/deafen2.png';
 
 export const BelowProfile = () => {
     return (
-        <div className='bg-gray-950 flex justify-between px-2 py-10px'>
+        <div className='cursor-pointer bg-gray-950 flex justify-between px-2 py-10px'>
             <LeftBelowProfile src={princesspix} offline={offline} alt="Princess Pangit na Pic" />
             <RightBelowProfile />
         </div>
@@ -15,7 +15,9 @@ export const BelowProfile = () => {
 
 const RightBelowProfileSolo = ({src,alt}) => {
     return (
-        <img className="object-contain ml-3" src={src} alt={alt}></img>
+        <button className='ml-1 rounded-md hover:bg-gray-650 p-1'>
+            <img className="object-contain " src={src} alt={alt}></img>
+        </button>
     )
 }
 const RightBelowProfile = () => {
