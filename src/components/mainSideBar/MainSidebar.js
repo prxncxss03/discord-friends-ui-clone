@@ -1,4 +1,5 @@
 import flag from '../../images/wumpusFlag.png';
+import { DirectMessages  } from './DirectMessages';
 
 export const MainSidebar = () => {
    return (
@@ -26,6 +27,7 @@ export const MainSidebar = () => {
                 </MainSelect>}>
 
            </MainSelectWrapper>
+           <DirectMessages/>
             
        </div>
    ) 
