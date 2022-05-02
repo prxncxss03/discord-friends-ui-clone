@@ -1,13 +1,13 @@
 import offline from '../../images/offline.png';
-import { Tooltip } from '../Tooltip.js';
+// import { Tooltip } from '../Tooltip.js';
 
 export const DirectMessages = () => {
     return (
         <div className='mx-2'>
             <DirectMessagesline>
             </DirectMessagesline>
-            <Tooltip tooltipText={'Create DM'} />
-            <DirectMessagesPersons gender="male" alt="male avatar" text="iambooo3"/>
+            {/* <Tooltip tooltipText={'Create DM'} /> */}
+            <DirectMessagesPersons gender="male" alt="male avatar" text="iambooo3" onClick={console.log('clicked x')}/>
             <DirectMessagesPersons gender="bottts" alt="bottts" text="SummerXX"/>
             <DirectMessagesPersons gender="initials" alt="avatar" text="sis kaye"/>
             <DirectMessagesPersons gender="identicon" alt="avatar" text="Ate Princess"/>

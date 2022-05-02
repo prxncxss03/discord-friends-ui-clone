@@ -15,7 +15,7 @@ export const BelowProfile = () => {
 
 const RightBelowProfileSolo = ({src,alt}) => {
     return (
-        <button className='ml-1 rounded-md hover:bg-gray-650 p-1'>
+        <button className='ml-1 rounded-md hover:bg-gray-650 ease-in-out p-1'>
             <img className="object-contain " src={src} alt={alt}></img>
         </button>
     )
