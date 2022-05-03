@@ -49,7 +49,7 @@ const RightBelowProfile = () => {
 const LeftBelowProfile = ({ alt,src,offline}) => {
     return (
         <div className='flex justify-center items-center'>
-            <div className="hover:opacity-80 ease-in-out profile relative z-0">
+            <div className="flex justify-center items-center over:opacity-80 ease-in-out profile relative z-0">
                
                 <img className = "w-8 z-0 rounded-full" src={src} alt={alt} />
                 
@@ -57,7 +57,7 @@ const LeftBelowProfile = ({ alt,src,offline}) => {
                     <img className="w-10px h-10px" src={offline} alt="offline symbol" />
                 </div>
             </div>
-            <div className='text-white text-xs ml-2'>
+            <div className='text-white text-xs ml-2 '>
                  <p>herm_p</p>
                  <p className='font-normal text-gray-400'>#3650</p>
             </div>
