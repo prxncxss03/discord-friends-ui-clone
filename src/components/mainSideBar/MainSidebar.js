@@ -4,7 +4,7 @@ import { BelowProfile } from './BelowProfile';
 
 export const MainSidebar = () => {
    return (
-       <div className=" bg-gray-800 flex flex-col w-60 ml-16 h-screen justify-between">
+       <div className=" bg-gray-800 pl-2 flex flex-col w-sidebar-width ml-16 h-screen justify-between">
            <div>
                <MainSearchBar />
                <MainSelectWrapper mainSelect1={
@@ -65,7 +65,7 @@ const MainSelectWrapper = ({mainSelect1,mainSelect2}) => {
 const MainSelect = ({icon, name}) => {
     return (
         <button className="w-full flex p-10px items-center ">
-            <span className="mx-2">{icon}</span>
+            <span className="ml-1 mr-2">{icon}</span>
             <span className=" text-sm ml-2 font-semibold ">{name}</span>
         </button>
     )

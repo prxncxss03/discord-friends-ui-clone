@@ -48,7 +48,7 @@ export const DirectMessages = () => {
 
 const DirectMessagesline = () => {
     return (
-        <div className='text-gray-420 mx-3 mt-1 flex justify-between items-center'>
+        <div className='text-gray-420 mx-3 mt-3 flex justify-between items-center'>
             <span className='text-xs hover:text-gray-400'>DIRECT MESSAGES</span>
             <Tooltipp tooltipTitle='Create DM' tooltipPlacement='top' tooltipChild={
                 <div>

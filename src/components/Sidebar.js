@@ -10,7 +10,7 @@ import spanish from '../images/spanishFlag.png';
 export const Sidebar = () => {
     return (
         <div className="fixed top-0 left-0 h-screen bg-gray-900 m-0
-        flex flex-col text-white shadow-lg  w-16">
+        flex flex-col text-white shadow-lg  w-sicon">
 
             <SidebarHome icon={<FaDiscord size="30"/>} text={'Home'} />
             <hr className='sidebar-hr'/>

@@ -9,6 +9,8 @@ module.exports = {
       spacing : {
         '1px' : '1px',
         '10px' : '10px',
+        'sicon': '74px',
+        'sidebar-width' : '253px',
       },
       fontFamily: {
         'radio' : ['Radio Canada', 'sans-serif'],
