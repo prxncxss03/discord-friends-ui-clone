@@ -3,7 +3,8 @@ import princesspix from '../../images/princesspix.jpeg';
 import mute from '../../images/Mute.png';
 import settings from '../../images/Settings.png';
 import deafen from '../../images/deafen2.png';
-
+import { Tooltipp  } from '../Tooltipp';
+// import Tooltip from '@mui/material/Tooltip';
 export const BelowProfile = () => {
     return (
         <div className='cursor-pointer bg-gray-950 flex justify-between px-2 py-10px'>
@@ -23,9 +24,23 @@ const RightBelowProfileSolo = ({src,alt}) => {
 const RightBelowProfile = () => {
     return (
         <div className='flex justify-center items-center'>
-            <RightBelowProfileSolo src={mute} alt={'Mute'}/>
-            <RightBelowProfileSolo src={deafen} alt={'Headphone'}/>
-            <RightBelowProfileSolo src={settings} alt={'setttings'}/>
+            <Tooltipp tooltipTitle='Unmute' tooltipPlacement='top' tooltipChild={
+                <div>
+                    <RightBelowProfileSolo src={mute} alt={'Mute'}/>
+                </div>
+            }/>    
+            <Tooltipp tooltipTitle='Deafen' tooltipPlacement='top' tooltipChild={
+                <div>
+                    <RightBelowProfileSolo src={deafen} alt={'Headphone'}/>
+                </div>
+            }/> 
+            <Tooltipp tooltipTitle='User settings' tooltipPlacement='top' tooltipChild={
+                <div>
+                    <RightBelowProfileSolo src={settings} alt={'setttings'}/>
+                </div>
+            }/>   
+            
+            
         </div>
     )
 }

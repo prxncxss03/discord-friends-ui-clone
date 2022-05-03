@@ -6,6 +6,7 @@ import dog from '../images/dog.jpeg';
 import perl from '../images/perl.png';
 import spanish from '../images/spanishFlag.png';
 
+
 export const Sidebar = () => {
     return (
         <div className="fixed top-0 left-0 h-screen bg-gray-900 m-0

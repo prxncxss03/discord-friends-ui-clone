@@ -1,5 +1,5 @@
 import offline from '../../images/offline.png';
-// import { Tooltip } from '../Tooltip.js';
+import { Tooltipp } from '../Tooltipp';
 import { PersonsAttributes } from './PersonsAttributes';
 import { useState } from 'react';
 
@@ -50,7 +50,12 @@ const DirectMessagesline = () => {
     return (
         <div className='text-gray-420 mx-3 mt-1 flex justify-between items-center'>
             <span className='text-xs hover:text-gray-400'>DIRECT MESSAGES</span>
-            <button   className='text-xl text-gray-400 relative'>+</button>
+            <Tooltipp tooltipTitle='Create DM' tooltipPlacement='top' tooltipChild={
+                <div>
+                    <button   className='text-xl text-gray-400 relative'>+</button>
+                </div>
+            }/>   
+            
         </div>
     )
 }
