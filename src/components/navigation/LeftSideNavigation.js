@@ -9,11 +9,11 @@ export const LeftSideNavigation = () => {
         settoggleTab(index);
     }
     return (
-        <div className="flex flex-col bg-blue-200 font-medium items-center max-h-fit">
+        <div className="flex flex-col font-medium w-full max-h-fit">
             <div className="flex">
                 <FriendsText></FriendsText>
                 <div >
-                    <IndivGrayTabs classTab = {toggleTab === 1 ? "hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-600  text-white mx-2 " : "text-white mx-2 " } onClicky={() => handleToggle(1)} btnText={'Online'}/>
+                    <IndivGrayTabs classTab = {toggleTab === 1 ? " active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-600  text-white mx-2 " : "text-white mx-2 " } onClicky={() => handleToggle(1)} btnText={'Online'}/>
                     <IndivGrayTabs classTab = {toggleTab === 2 ? "active:bg-violet-700 text-white mx-2 " : "text-green-500 mx-2 " } onClicky={() => handleToggle(2)} btnText={'All'}/>
                     <IndivGrayTabs onClicky={() => handleToggle(3)} btnText={'Pending'}/>
                     <IndivGrayTabs  onClicky={() => handleToggle(4)} btnText={'Blocked'}/>
@@ -21,11 +21,11 @@ export const LeftSideNavigation = () => {
                 <AddFriendTab></AddFriendTab>
             </div>
             
-            <PanelTabs panelClass={toggleTab === 1 ? "bg-yellow-400" : "bg-violet-700 hidden"} panelImage={online}
+            <PanelTabs panelClass={toggleTab === 1 ? "bg-transparent h-full p-28 flex flex-col items-center justify-center" : "bg-violet-700 hidden"} panelImage={online}
                 panelText={"No one's around to play with Wumpus"} >
 
             </PanelTabs>
-            <PanelTabs panelClass={toggleTab === 2 ? "bg-yellow-400" : "bg-violet-700 hidden" }panelImage={pending}
+            <PanelTabs panelClass={toggleTab === 2 ? "bg-yellow-400" : "bg-violet-700 hidden" } panelImage={pending}
              panelText={"Pending"} >
                     
             </PanelTabs>
@@ -79,7 +79,7 @@ const PanelTabs = ({panelText, panelImage, panelClass}) => {
     return (
         <div className={panelClass}>
             <span>
-                <img src="{panelImage}" alt=""/>
+                <img src={panelImage} alt=""/>
             </span>
             <p>{panelText}</p>
         </div>

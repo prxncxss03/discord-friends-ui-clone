@@ -4,7 +4,7 @@ import mute from '../../images/Mute.png';
 import settings from '../../images/Settings.png';
 import deafen from '../../images/deafen2.png';
 import { Tooltipp  } from '../Tooltipp';
-// import Tooltip from '@mui/material/Tooltip';
+
 export const BelowProfile = () => {
     return (
         <div className='cursor-pointer bg-gray-950 flex justify-between px-2 py-10px'>
