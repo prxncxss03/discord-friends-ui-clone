@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="App font-radio font-bold flex">
       <MainSidebar></MainSidebar>
-      <Sidebar></Sidebar> 
       <Navigation></Navigation>
+      <Sidebar></Sidebar> 
     </div>
   );
 }
