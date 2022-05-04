@@ -10,7 +10,7 @@ export const RightSideNavigation = () => {
 
 const ActiveNows = () => {
     return (
-        <div className="text-white mt-20">
+        <div className="text-white w-350px border-l h-full">
             <span>Active Now</span>
             <p>It's quiet for now...</p>
             <p>When a friend starts an activity-like playing a game or

@@ -10,7 +10,9 @@ module.exports = {
         '1px' : '1px',
         '10px' : '10px',
         'sicon': '74px',
-        'sidebar-width' : '250px',
+        'sidebar-width': '325px',
+        '350px' : '350px',
+        '420px' : '420px',
       },
       fontFamily: {
         'radio' : ['Radio Canada', 'sans-serif'],
@@ -20,6 +22,7 @@ module.exports = {
       },
       colors: {
         gray: {
+          980: '#202225',
           950: '#292b2f',
           900: '#202225',
           800: '#2f3136',
