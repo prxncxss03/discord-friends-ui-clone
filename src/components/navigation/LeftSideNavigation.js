@@ -21,11 +21,11 @@ export const LeftSideNavigation = () => {
                 <AddFriendTab></AddFriendTab>
             </div>
             
-            <PanelTabs panelClass={toggleTab === 1 ? "bg-yellow-400" : "bg-violet-700"} panelImage={online}
+            <PanelTabs panelClass={toggleTab === 1 ? "bg-yellow-400" : "bg-violet-700 hidden"} panelImage={online}
                 panelText={"No one's around to play with Wumpus"} >
 
             </PanelTabs>
-            <PanelTabs panelClass={toggleTab === 2 ? "bg-yellow-400" : "bg-violet-700" }panelImage={pending}
+            <PanelTabs panelClass={toggleTab === 2 ? "bg-yellow-400" : "bg-violet-700 hidden" }panelImage={pending}
              panelText={"Pending"} >
                     
             </PanelTabs>
