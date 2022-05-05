@@ -29,9 +29,9 @@ export const LeftSideNavigation = () => {
 
             </PanelTabs>
             <PanelTabs panelClass={toggleTab === 3 ? "panel-active" : "panel-inactive" } panelImage={pending}
-             panelText={"There are no pending friend requests. Here's Wumpus for now."} >
-                    
+             panelText={"There are no pending friend requests. Here's Wumpus for now."} >  
             </PanelTabs>
+            <AllTop></AllTop>
             <PanelTabs panelClass={toggleTab === 4 ? "panel-active" : "panel-inactive" } panelImage={blocked}
              panelText={"You can't unblock the Wumpus."} >
                     
@@ -89,6 +89,17 @@ const PanelTabs = ({panelText, panelImage, panelClass}) => {
                 <img src={panelImage} alt=""/>
             </span>
             <p>{panelText}</p>
+        </div>
+    )
+}
+// All Panel
+const AllTop = () => {
+    return (
+        <div className="w-full p-10px shadow-defi border-b-1 border-b-gray-900 shadow-def ">
+            <div className="w-full h-full ">
+                <input type="text" placeholder="Find or start a conversation" className="bg-gray-900 text-sm text-gray-400 outline-none
+                placeholder:text-xs font-bold placeholder:text-gray-350 py-1 px-2 w-full rounded-sm"/>
+            </div>
         </div>
     )
 }
