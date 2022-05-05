@@ -3,13 +3,24 @@
     border-radius: 6px;
     padding: 0 0.5rem;
     color: white;
-    margin: 0 0.75rem;
+    margin: 0 0.60rem;
+    font-size: 0.9375rem;
   }
 
   .tabs-panel-inactive {
       color: #b9bbbe;
-      margin: 0 0.75rem;
+      margin: 0 0.60rem;
       padding: 0 0.5rem;
+      font-size: 0.9375rem;
+  }
+
+  .tabs-panel-inactive:hover{
+    background-color: #4f545c99;
+    border-radius: 6px;
+    padding: 0 0.5rem;
+    color: white;
+    margin: 0 0.60rem;
+    font-size: 0.9375rem;
   }
 
   .panel-active {

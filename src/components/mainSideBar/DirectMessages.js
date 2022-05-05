@@ -27,9 +27,14 @@ export const DirectMessages = () => {
                                 <img src={personI.src} alt={personI.alt} className="avatar-wrapper w-8 h-8 flex justify-center rounded-full">
                                    
                                 </img>
-                                <div className="offline-wrapper absolute top-5 left-5 bg-gray-800 rounded-lg w-4 h-4 flex justify-center items-center">
-                                    <img className="w-10px h-10px" src={offline} alt="offline symbol" />
-                                </div>
+                                <Tooltipp tooltipTitle='offline' tooltipPlacement='top' tooltipChild={
+                                    
+                                    <div className="offline-wrapper absolute top-5 left-5 bg-gray-800 rounded-lg w-4 h-4 flex justify-center items-center">
+                                        <img className="w-10px h-10px" src={offline} alt="offline symbol" />
+                                    </div>
+                                    
+                                }/>  
+                                
                             </div>
                             <span className='ml-3 group-hover:text-gray-400 text-gray-420 text-sm font-semibold'>{personI.text}</span>
                         </div>

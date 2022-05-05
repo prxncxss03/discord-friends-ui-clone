@@ -4,7 +4,8 @@ import { RightSideNavigation } from "./RightSideNavigation";
 
 export const Navigation = () => {
     return (
-        <div className="bg-gray-700 py-3 flex w-full shadow-defi">
+        <div className="bg-gray-700 h-screen flex w-full ">
+
             <LeftSideNavigation></LeftSideNavigation>
             <RightSideNavigation></RightSideNavigation>
         </div>

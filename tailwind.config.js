@@ -14,6 +14,9 @@ module.exports = {
         '350px' : '350px',
         '420px' : '420px',
       },
+      fontSize : {
+        '15px' : '0.9375rem',
+      },
       fontFamily: {
         'radio' : ['Radio Canada', 'sans-serif'],
       },
