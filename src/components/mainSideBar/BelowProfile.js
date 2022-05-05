@@ -58,8 +58,8 @@ const LeftBelowProfile = ({ alt,src,offline}) => {
                 </div>
             </div>
             <div className='text-white text-xs ml-2 '>
-                 <p>herm_p</p>
-                 <p className='font-normal text-gray-400'>#3650</p>
+                 <p>pregremer</p>
+                 <p className='font-normal text-gray-400'>#2022</p>
             </div>
         </div>
     )
