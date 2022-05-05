@@ -1,5 +1,6 @@
 import { useState } from "react";
 import pending from '../../images/pending.png';
+import blocked from '../../images/blocked.png';
 import online from '../../images/online.png';
 import './tabs.css';
 
@@ -10,7 +11,7 @@ export const LeftSideNavigation = () => {
         settoggleTab(index);
     }
     return (
-        <div className="flex flex-col font-medium w-full ">
+        <div className="flex flex-col font-medium w-full">
             <div className="flex  shadow-defi  py-2 items-center">
                 <FriendsText></FriendsText>
                 <div className="bg-gray-600 w-1px py-3"></div>
@@ -23,12 +24,16 @@ export const LeftSideNavigation = () => {
                 <AddFriendTab></AddFriendTab>
             </div>
             
-            <PanelTabs panelClass={toggleTab === 1 ? "bg-transparent h-full p-30 flex flex-col items-center justify-center" : "hidden"} panelImage={online}
+            <PanelTabs panelClass={toggleTab === 1 ? "panel-active" : "panel-inactive"} panelImage={online}
                 panelText={"No one's around to play with Wumpus"} >
 
             </PanelTabs>
-            <PanelTabs panelClass={toggleTab === 2 ? "bg-yellow-400" : "bg-violet-700 hidden" } panelImage={pending}
-             panelText={"Pending"} >
+            <PanelTabs panelClass={toggleTab === 3 ? "panel-active" : "panel-inactive" } panelImage={pending}
+             panelText={"There are no pending friend requests. Here's Wumpus for now."} >
+                    
+            </PanelTabs>
+            <PanelTabs panelClass={toggleTab === 4 ? "panel-active" : "panel-inactive" } panelImage={blocked}
+             panelText={"You can't unblock the Wumpus."} >
                     
             </PanelTabs>
     
@@ -80,7 +85,7 @@ const AddFriendTab = () => {
 const PanelTabs = ({panelText, panelImage, panelClass}) => {
     return (
         <div className={panelClass}>
-            <span>
+            <span className="mb-12">
                 <img src={panelImage} alt=""/>
             </span>
             <p>{panelText}</p>
