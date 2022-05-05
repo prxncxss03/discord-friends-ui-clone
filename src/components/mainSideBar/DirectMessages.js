@@ -1,4 +1,5 @@
 import offline from '../../images/offline.png';
+
 import { Tooltipp } from '../Tooltipp';
 import { PersonsAttributes } from './PersonsAttributes';
 import { useState } from 'react';
@@ -23,9 +24,9 @@ export const DirectMessages = () => {
                         
                         <div className='flex justify-center items-center'>
                             <div className="profile relative z-0">
-                                <div className="avatar-wrapper w-8 h-8 flex justify-center bg-white rounded-full">
-                                    <img className = "w-6 z-0" src={`https://avatars.dicebear.com/api/${personI.gender}/${avatarName}.svg`} alt={personI.alt} />
-                                </div>
+                                <img src={personI.src} alt={personI.alt} className="avatar-wrapper w-8 h-8 flex justify-center rounded-full">
+                                   
+                                </img>
                                 <div className="offline-wrapper absolute top-5 left-5 bg-gray-800 rounded-lg w-4 h-4 flex justify-center items-center">
                                     <img className="w-10px h-10px" src={offline} alt="offline symbol" />
                                 </div>

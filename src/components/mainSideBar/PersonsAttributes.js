@@ -1,44 +1,52 @@
+import elmir from '../../images/elmir.png';
+import sheng from '../../images/sheng.png';
+import jehoo from '../../images/jehoo.png';
+import keeng from '../../images/keeng.png';
+import reven from '../../images/reven.png';
+import siskaye from '../../images/siskaye.png';
+import threesa from '../../images/threesa.png';
+
 export const PersonsAttributes = [
     {
         id : 1,
-        gender : 'male',
-        alt : 'male avatar',
+        src : elmir,
+        alt : 'kuya elmir',
         text : 'iambooo3',
     },
     {
         id : 2,
-        gender : 'bottts',
-        alt : 'bottts',
+        src : threesa,
+        alt : 'ate thesa',
         text : 'SummerXX',
     },
     {
         id : 3,
-        gender : 'initials',
-        alt : 'avatar',
+        src : siskaye,
+        alt : 'sis kaye',
         text : 'sis kaye',
     },
     {
         id : 4,
-        gender : 'identicon',
-        alt : 'identicon',
-        text : 'Ate Princess',
+        src : jehoo,
+        alt : 'kuya jehu',
+        text : 'J1hu',
     },
     {
         id : 5,
-        gender : 'female',
-        alt : 'female',
+        src : sheng,
+        alt : 'siang',
         text : 'siang',
     },
     {
         id : 6,
-        gender : 'micah',
-        alt : 'micah',
-        text : 'ravenpocon',
+        src : reven,
+        alt : 'kuya raven',
+        text : 'ravenpocs',
     },
     {
         id : 7,
-        gender : 'avataaars',
-        alt : 'avatars',
-        text : 'Sw3as S0ng3rists',
+        src : keeng,
+        alt : 'ate keng',
+        text : 'Sw3as s0ngeristz',
     },
 ]
