@@ -29,22 +29,19 @@ export const RightSideNavigation = () => {
    ) 
 }
 
-const RightSideIcon = ({rightIcon}) => {
-    return (
-        <span>
-            {rightIcon}
-        </span>
-    )
-}
+
 
 const ActiveNows = () => {
     return (
-        <div className="text-white w-350px border-l h-full">
-            <span>Active Now</span>
-            <p>It's quiet for now...</p>
-            <p>When a friend starts an activity-like playing a game or
-                hanging out on voice-we'll show it here!
-            </p>
+        <div className="text-white w-350px border-l border-l-gray-600 h-full py-5 px-4">
+            <span className=" text-xl ">Active Now</span>
+
+            <div className="text-center px-3 mt-8">
+                <p>It's quiet for now...</p>
+                <p className="text-13px font-normal text-gray-420">When a friend starts an activity-like playing a game or
+                    hanging out on voice-we'll show it here!
+                </p>
+            </div>
         </div>
     )
 }
