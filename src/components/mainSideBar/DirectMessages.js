@@ -39,8 +39,8 @@ export const DirectMessages = () => {
                             <span className='ml-3 group-hover:text-gray-400 text-gray-420 text-sm font-semibold'>{personI.text}</span>
                         </div>
                         
-                        <button  onClick={()=> handleRemovePerson(index)} datatest= {personI.id} className='mr-1'>
-                            <svg  name="svg-name" className='opacity-0 group-hover:opacity-100' aria-hidden="false" width="16" height="16" viewBox="0 0 24 24"><path fill="#96989D" d="M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z"></path></svg>
+                        <button  onClick={()=> handleRemovePerson(index)} datatest= {personI.id} className='mr-1 hidden group-hover:flex '>
+                            <svg  name="svg-name" aria-hidden="false" width="16" height="16" viewBox="0 0 24 24"><path fill="#96989D" d="M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z"></path></svg>
                         </button>
                     </span>
                 )

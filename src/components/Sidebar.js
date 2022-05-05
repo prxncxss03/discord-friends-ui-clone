@@ -51,7 +51,7 @@ const SidebarHome = ({icon, text}) => {
     return (
         <div className="sidebar-home group">
         {icon}
-        <span className="sidebar-tooltip group-hover:flex">
+        <span className="sidebar-tooltip group-hover:scale-100">
             {text}
         </span>
     </div>
