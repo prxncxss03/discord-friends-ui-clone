@@ -12,41 +12,55 @@ export const PersonsAttributes = [
         src : elmir,
         alt : 'kuya elmir',
         text : 'iambooo3',
+        status : 'offline',
+        number : '#1111'
     },
     {
         id : 2,
         src : threesa,
         alt : 'ate thesa',
         text : 'SummerXX',
+        status : 'offline',
+        number : '#2222'
     },
     {
         id : 3,
         src : siskaye,
         alt : 'sis kaye',
         text : 'sis kaye',
+        status : 'offline',
+        number : '#3333'
     },
     {
         id : 4,
         src : jehoo,
         alt : 'kuya jehu',
         text : 'J1hu',
+        status : 'offline',
+        number : '#4444'
     },
     {
         id : 5,
         src : sheng,
         alt : 'siang',
         text : 'siang',
+        status : 'offline',
+        number : '#5454',
     },
     {
         id : 6,
         src : reven,
         alt : 'kuya raven',
         text : 'ravenpocs',
+        status : 'offline',
+        number : '#6546',
     },
     {
         id : 7,
         src : keeng,
         alt : 'ate keng',
         text : 'Sw3as s0ngeristz',
+        status : 'offline',
+        number : '#7432',
     },
 ]
