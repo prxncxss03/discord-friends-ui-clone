@@ -3,13 +3,14 @@ import pending from '../../images/pending.png';
 import blocked from '../../images/blocked.png';
 import online from '../../images/online.png';
 import { PersonsAttributes } from "../mainSideBar/PersonsAttributes";
-import elmir from '../../images/elmir.png';
-import jehoo from '../../images/jehoo.png';
-import keeng from '../../images/keeng.png';
-import reven from '../../images/reven.png';
-import sheng from '../../images/sheng.png';
-import siskaye from '../../images/siskaye.png';
-import threesa from '../../images/threesa.png';
+// import elmir from '../../images/elmir.png';
+// import jehoo from '../../images/jehoo.png';
+// import keeng from '../../images/keeng.png';
+// import reven from '../../images/reven.png';
+// import sheng from '../../images/sheng.png';
+// import siskaye from '../../images/siskaye.png';
+// import threesa from '../../images/threesa.png';
+import offline from '../../images/offline.png';
 import './tabs.css';
 
 export const LeftSideNavigation = () => {
@@ -40,16 +41,28 @@ export const LeftSideNavigation = () => {
             <PanelTabs panelClass={toggleTab === 3 ? "panel-active" : "panel-inactive" } panelImage={pending}
              panelText={"There are no pending friend requests. Here's Wumpus for now."} >  
             </PanelTabs>
-            <AllTop></AllTop>
+         
             <PanelTabs panelClass={toggleTab === 4 ? "panel-active" : "panel-inactive" } panelImage={blocked}
              panelText={"You can't unblock the Wumpus."} >
                     
             </PanelTabs>
 
-
             <div>
-                    {PersonsAttributes.map((personI)=> {
-                         return (
+                    <div className="w-full p-10px shadow-defi border-b-1 border-b-gray-900 shadow-def ">
+                        <div className="w-full h-full ">
+                            <input type="text" onChange={(event)=>{setSearching(event.target.value)}}placeholder="Search" className="bg-gray-900 text-sm text-gray-400 outline-none
+                            placeholder:text-xs font-bold placeholder:text-gray-350 py-1 px-2 w-full rounded-sm"/>
+                        </div>
+                    </div>
+                {
+                    PersonsAttributes.filter((val)=> {
+                        if (searching == ""){
+                            return val
+                        } else if (searching == ""){
+                            console.log('hello')
+                        }
+                    }).map((personI)=> {
+                        return (
                             <span  key={personI.id} className='cursor-pointer hover:bg-gray-650 p-2 ease-in-out rounded-md flex justify-between items-center w-full group '>
                                 
                                 <div className='flex justify-center items-center'>
@@ -57,29 +70,26 @@ export const LeftSideNavigation = () => {
                                         <img src={personI.src} alt={personI.alt} className="avatar-wrapper w-8 h-8 flex justify-center rounded-full">
                                            
                                         </img>
-                                        <Tooltipp tooltipTitle='offline' tooltipPlacement='top' tooltipChild={
-                                            
-                                            <div className="offline-wrapper absolute top-5 left-5 bg-gray-800 rounded-lg w-4 h-4 flex justify-center items-center">
+                                        <div className="offline-wrapper absolute top-5 left-5 bg-gray-800 rounded-lg w-4 h-4 flex justify-center items-center">
                                                 <img className="w-10px h-10px" src={offline} alt="offline symbol" />
                                             </div>
-                                            
-                                        }/>  
-                                        
                                     </div>
                                     <span className='ml-3 group-hover:text-gray-400 text-gray-420 text-sm font-semibold'>{personI.text}</span>
                                 </div>
                                 
-                                <button  onClick={()=> handleRemovePerson(index)} datatest= {personI.id} className='mr-1 hidden group-hover:flex '>
+                                <button  datatest= {personI.id} className='mr-1 hidden group-hover:flex '>
                                     <svg  name="svg-name" aria-hidden="false" width="16" height="16" viewBox="0 0 24 24"><path fill="#96989D" d="M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z"></path></svg>
                                 </button>
                             </span>
+                        )
                     })
-                    )
+                }
+            </div>
+
+
            
-    
-        
-        
         </div>
+                   
     )
 }
 
@@ -129,17 +139,6 @@ const PanelTabs = ({panelText, panelImage, panelClass}) => {
                 <img src={panelImage} alt=""/>
             </span>
             <p>{panelText}</p>
-        </div>
-    )
-}
-// All Panel
-const AllTop = () => {
-    return (
-        <div className="w-full p-10px shadow-defi border-b-1 border-b-gray-900 shadow-def ">
-            <div className="w-full h-full ">
-                <input type="text" placeholder="Find or start a conversation" className="bg-gray-900 text-sm text-gray-400 outline-none
-                placeholder:text-xs font-bold placeholder:text-gray-350 py-1 px-2 w-full rounded-sm"/>
-            </div>
         </div>
     )
 }
