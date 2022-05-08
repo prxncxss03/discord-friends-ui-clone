@@ -31,11 +31,10 @@ export const LeftSideNavigation = () => {
             <PanelTabs panelClass={toggleTab === 3 ? "panel-active" : "panel-inactive" } panelImage={pending}
              panelText={"There are no pending friend requests. Here's Wumpus for now."} >  
             </PanelTabs>
-            <AllTop></AllTop>
             <PanelTabs panelClass={toggleTab === 4 ? "panel-active" : "panel-inactive" } panelImage={blocked}
              panelText={"You can't unblock the Wumpus."} >
-                    
             </PanelTabs>
+            
     
         
         
