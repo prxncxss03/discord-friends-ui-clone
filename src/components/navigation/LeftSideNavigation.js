@@ -2,7 +2,10 @@ import { useState } from "react";
 import pending from '../../images/pending.png';
 import blocked from '../../images/blocked.png';
 import online from '../../images/online.png';
+import offline from '../../images/offline.png';
+import { PersonsAttributes } from "../mainSideBar/PersonsAttributes";
 import './tabs.css';
+import { faPersonMilitaryRifle } from "@fortawesome/free-solid-svg-icons";
 
 export const LeftSideNavigation = () => {
     const [toggleTab, settoggleTab] = useState(1);
@@ -35,7 +38,37 @@ export const LeftSideNavigation = () => {
              panelText={"You can't unblock the Wumpus."} >
             </PanelTabs>
             
-    
+            {/* search bar */}
+          
+            <div className="w-full h-full ">
+                <input type="text" placeholder="Find or start a conversation" className="bg-gray-900 text-sm text-gray-400 outline-none
+                placeholder:text-xs font-bold placeholder:text-gray-350 py-1 px-2 w-full rounded-sm"/>
+            </div>
+           
+            {PersonsAttributes.map((personI,index) => {
+            return (
+                <span  key={personI.id} className='cursor-pointer hover:bg-gray-650 p-2 ease-in-out rounded-md flex justify-between items-center w-full group '>
+                    
+                    <div className='flex justify-center items-center'>
+                        <div className="profile relative z-0">
+                            <img src={personI.src} alt={personI.alt} className="avatar-wrapper w-8 h-8 flex justify-center rounded-full">
+                            
+                            </img>
+                            <div className="offline-wrapper absolute top-5 left-5 bg-gray-800 rounded-lg w-4 h-4 flex justify-center items-center">
+                                    <img className="w-10px h-10px" src={offline} alt="offline symbol" />
+                                </div>
+                           
+                        </div>
+                        <span className='ml-3 group-hover:text-gray-400 text-gray-420 text-sm font-semibold'>{personI.text}</span>
+                    </div>
+                    
+                    <button   datatest= {personI.id} className='mr-1 hidden group-hover:flex '>
+                        <svg  name="svg-name" aria-hidden="false" width="16" height="16" viewBox="0 0 24 24"><path fill="#96989D" d="M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z"></path></svg>
+                    </button>
+                </span>
+            )
+            }
+            )}
         
         
         </div>
