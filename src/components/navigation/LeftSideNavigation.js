@@ -5,10 +5,11 @@ import online from '../../images/online.png';
 import offline from '../../images/offline.png';
 import { PersonsAttributes } from "../mainSideBar/PersonsAttributes";
 import './tabs.css';
-import { faPersonMilitaryRifle } from "@fortawesome/free-solid-svg-icons";
+
 
 export const LeftSideNavigation = () => {
     const [toggleTab, settoggleTab] = useState(1);
+    const [searchTerm, setSearchTerm] = useState('');
     const handleToggle = (index) => {
         console.log(index);
         settoggleTab(index);
@@ -41,11 +42,19 @@ export const LeftSideNavigation = () => {
             {/* search bar */}
           
             <div className="w-full h-full ">
-                <input type="text" placeholder="Find or start a conversation" className="bg-gray-900 text-sm text-gray-400 outline-none
+                <input type="text" placeholder="Search" onChange={(event) => {setSearchTerm(event.target.value)}} className="bg-gray-900 text-sm text-gray-400 outline-none
                 placeholder:text-xs font-bold placeholder:text-gray-350 py-1 px-2 w-full rounded-sm"/>
             </div>
            
-            {PersonsAttributes.map((personI,index) => {
+            {PersonsAttributes.filter((value) => {
+                if (searchTerm == ""){
+                    return value
+                } else if (value.text.toLowerCase().includes(searchTerm.toLowerCase())){
+                    return value
+                }
+            }
+
+            ).map((personI,index) => {
             return (
                 <span  key={personI.id} className='cursor-pointer hover:bg-gray-650 p-2 ease-in-out rounded-md flex justify-between items-center w-full group '>
                     
