@@ -19,7 +19,7 @@ Honestly, Tailwind is easy to learn but writing this project in React was so dif
 
 <!-- ## Features
 ## Screenshots
-## Realizations --> -->
+## Realizations --> 
 
 
 
