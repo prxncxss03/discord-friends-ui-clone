@@ -5,7 +5,7 @@ import online from '../../images/online.png';
 import offline from '../../images/offline.png';
 import { PersonsAttributes } from "../mainSideBar/PersonsAttributes";
 import './tabs.css';
-import { counter } from "@fortawesome/fontawesome-svg-core";
+
 
 
 export const LeftSideNavigation = () => {
@@ -13,7 +13,6 @@ export const LeftSideNavigation = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [count, setCount] = useState(PersonsAttributes.length);
     const handleToggle = (index) => {
-        console.log(index);
         settoggleTab(index);
     }
     return (
@@ -72,7 +71,7 @@ export const LeftSideNavigation = () => {
                 
             }
 
-            ).map((personI,index) => {
+            ).map((personI) => {
             
             return (
                 <span  key={personI.id} className='cursor-pointer hover:bg-gray-650 p-2 ease-in-out rounded-md flex justify-between items-center w-full group '>
