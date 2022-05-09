@@ -11,7 +11,7 @@ import { counter } from "@fortawesome/fontawesome-svg-core";
 export const LeftSideNavigation = () => {
     const [toggleTab, settoggleTab] = useState(1);
     const [searchTerm, setSearchTerm] = useState('');
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(PersonsAttributes.length);
     const handleToggle = (index) => {
         console.log(index);
         settoggleTab(index);
@@ -60,15 +60,16 @@ export const LeftSideNavigation = () => {
             
             
            
-            {PersonsAttributes.filter((value) => {
+            { PersonsAttributes.filter((value) => {
                 
                 if (searchTerm === ""){
                     
                     return value
                 } else if (value.text.toLowerCase().includes(searchTerm.toLowerCase())){
-                  
+                    
                     return value
                 }
+                
             }
 
             ).map((personI,index) => {
@@ -91,8 +92,9 @@ export const LeftSideNavigation = () => {
                     <button   datatest= {personI.id} className='mr-1 hidden group-hover:flex '>
                         <svg  name="svg-name" aria-hidden="false" width="16" height="16" viewBox="0 0 24 24"><path fill="#96989D" d="M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z"></path></svg>
                     </button>
-                    
+                
                 </span>
+                
             )
             }
             )
