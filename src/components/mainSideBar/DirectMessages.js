@@ -1,5 +1,4 @@
 import offline from '../../images/offline.png';
-
 import { Tooltipp } from '../Tooltipp';
 import { PersonsAttributes } from './PersonsAttributes';
 import { useState } from 'react';
