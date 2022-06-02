@@ -34,7 +34,7 @@ export const PersonsAttributes = [
     {
         id : 4,
         src : jehoo,
-        alt : 'kuya jehu',
+        alt : 'person4',
         text : 'J1hu',
         status : 'offline',
         number : '#4444'

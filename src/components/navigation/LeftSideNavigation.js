@@ -2,22 +2,18 @@ import { useState } from "react";
 import pending from '../../images/pending.png';
 import blocked from '../../images/blocked.png';
 import online from '../../images/online.png';
-import { PersonsAttributes } from "../mainSideBar/PersonsAttributes";
-// import elmir from '../../images/elmir.png';
-// import jehoo from '../../images/jehoo.png';
-// import keeng from '../../images/keeng.png';
-// import reven from '../../images/reven.png';
-// import sheng from '../../images/sheng.png';
-// import siskaye from '../../images/siskaye.png';
-// import threesa from '../../images/threesa.png';
 import offline from '../../images/offline.png';
+import { PersonsAttributes } from "../mainSideBar/PersonsAttributes";
 import './tabs.css';
+
+
 
 export const LeftSideNavigation = () => {
     const [searching, setSearching] = useState("")
     const [toggleTab, settoggleTab] = useState(1);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [count, setCount] = useState(PersonsAttributes.length);
     const handleToggle = (index) => {
-        console.log(index);
         settoggleTab(index);
     }
     return (
@@ -41,53 +37,73 @@ export const LeftSideNavigation = () => {
             <PanelTabs panelClass={toggleTab === 3 ? "panel-active" : "panel-inactive" } panelImage={pending}
              panelText={"There are no pending friend requests. Here's Wumpus for now."} >  
             </PanelTabs>
-         
             <PanelTabs panelClass={toggleTab === 4 ? "panel-active" : "panel-inactive" } panelImage={blocked}
              panelText={"You can't unblock the Wumpus."} >
-                    
             </PanelTabs>
+            
+            {/* search bar */}
+          <div className={toggleTab === 2 ? "panel-active" : "panel-inactive" }>
 
-            <div>
-                    <div className="w-full p-10px shadow-defi border-b-1 border-b-gray-900 shadow-def ">
-                        <div className="w-full h-full ">
-                            <input type="text" onChange={(event)=>{setSearching(event.target.value)}}placeholder="Search" className="bg-gray-900 text-sm text-gray-400 outline-none
-                            placeholder:text-xs font-bold placeholder:text-gray-350 py-1 px-2 w-full rounded-sm"/>
-                        </div>
-                    </div>
-                {
-                    PersonsAttributes.filter((val)=> {
-                        if (searching == ""){
-                            return val
-                        } else if (searching == ""){
-                            console.log('hello')
-                        }
-                    }).map((personI)=> {
-                        return (
-                            <span  key={personI.id} className='cursor-pointer hover:bg-gray-650 p-2 ease-in-out rounded-md flex justify-between items-center w-full group '>
-                                
-                                <div className='flex justify-center items-center'>
-                                    <div className="profile relative z-0">
-                                        <img src={personI.src} alt={personI.alt} className="avatar-wrapper w-8 h-8 flex justify-center rounded-full">
-                                           
-                                        </img>
-                                        <div className="offline-wrapper absolute top-5 left-5 bg-gray-800 rounded-lg w-4 h-4 flex justify-center items-center">
-                                                <img className="w-10px h-10px" src={offline} alt="offline symbol" />
-                                            </div>
-                                    </div>
-                                    <span className='ml-3 group-hover:text-gray-400 text-gray-420 text-sm font-semibold'>{personI.text}</span>
-                                </div>
-                                
-                                <button  datatest= {personI.id} className='mr-1 hidden group-hover:flex '>
-                                    <svg  name="svg-name" aria-hidden="false" width="16" height="16" viewBox="0 0 24 24"><path fill="#96989D" d="M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z"></path></svg>
-                                </button>
-                            </span>
-                        )
-                    })
-                }
+            <div className="flex bg-gray-900 p-1 justify-center items-center rounded-sm">
+                <input type="text" placeholder="Search" onChange={(event) => {setSearchTerm(event.target.value)
+   
+                }} className="bg-gray-900  text-sm text-gray-400 outline-none
+                placeholder:text-xs font-bold placeholder:text-gray-350 py-1 px-2 w-full rounded-sm"/>
+                <span className="">
+                    <svg className = {searchTerm.length !== 0 ? "hidden ease-in-out 800ms" : "flex ease-in-out 800ms"} aria-label="Search" aria-hidden="false" width="20" height="20" viewBox="0 0 24 24"><path fill="#B9BBBE" d="M21.707 20.293L16.314 14.9C17.403 13.504 18 11.799 18 10C18 7.863 17.167 5.854 15.656 4.344C14.146 2.832 12.137 2 10 2C7.863 2 5.854 2.832 4.344 4.344C2.833 5.854 2 7.863 2 10C2 12.137 2.833 14.146 4.344 15.656C5.854 17.168 7.863 18 10 18C11.799 18 13.504 17.404 14.9 16.314L20.293 21.706L21.707 20.293ZM10 16C8.397 16 6.891 15.376 5.758 14.243C4.624 13.11 4 11.603 4 10C4 8.398 4.624 6.891 5.758 5.758C6.891 4.624 8.397 4 10 4C11.603 4 13.109 4.624 14.242 5.758C15.376 6.891 16 8.398 16 10C16 11.603 15.376 13.11 14.242 14.243C13.109 15.376 11.603 16 10 16Z"></path></svg>
+                    <svg className={searchTerm.length !== 0 ? "flex ease-in-out 800ms" : "hidden ease-in-out 800ms "} aria-label="Clear" aria-hidden="false" width="24" height="24" viewBox="0 0 24 24"><path fill="#B9BBBE" d="M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z"></path></svg>
+                </span>
             </div>
-
-
+            <span>
+                <p>ALL FRIENDS - {count}</p>
+            </span>
+            
+            
            
+            { PersonsAttributes.filter((value) => {
+                
+                if (searchTerm === ""){
+                    
+                    return value
+                } else if (value.text.toLowerCase().includes(searchTerm.toLowerCase())){
+                    
+                    return value
+                }
+                
+            }
+
+            ).map((personI) => {
+            
+            return (
+                <span  key={personI.id} className='cursor-pointer hover:bg-gray-650 p-2 ease-in-out rounded-md flex justify-between items-center w-full group '>
+                    <div className='flex justify-center items-center'>
+                        <div className="profile relative z-0">
+                            <img src={personI.src} alt={personI.alt} className="avatar-wrapper w-8 h-8 flex justify-center rounded-full">
+                            
+                            </img>
+                            <div className="offline-wrapper absolute top-5 left-5 bg-gray-800 rounded-lg w-4 h-4 flex justify-center items-center">
+                                    <img className="w-10px h-10px" src={offline} alt="offline symbol" />
+                                </div>
+                           
+                        </div>
+                        <span className='ml-3 group-hover:text-gray-400 text-gray-420 text-sm font-semibold'>{personI.text}</span>
+                    </div>
+                    
+                    <button   datatest= {personI.id} className='mr-1 hidden group-hover:flex '>
+                        <svg  name="svg-name" aria-hidden="false" width="16" height="16" viewBox="0 0 24 24"><path fill="#96989D" d="M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z"></path></svg>
+                    </button>
+                
+                </span>
+                
+            )
+            }
+            )
+            
+            }
+           
+          </div>
+        
+        
         </div>
                    
     )
@@ -142,4 +158,14 @@ const PanelTabs = ({panelText, panelImage, panelClass}) => {
         </div>
     )
 }
-
+// All Panel
+// const AllTop = () => {
+//     return (
+//         <div className="w-full p-10px shadow-defi border-b-1 border-b-gray-900 shadow-def ">
+//             <div className="w-full h-full ">
+//                 <input type="text" placeholder="Find or start a conversation" className="bg-gray-900 text-sm text-gray-400 outline-none
+//                 placeholder:text-xs font-bold placeholder:text-gray-350 py-1 px-2 w-full rounded-sm"/>
+//             </div>
+//         </div>
+//     )
+// }
