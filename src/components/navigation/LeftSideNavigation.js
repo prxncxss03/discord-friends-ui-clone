@@ -3,8 +3,11 @@ import pending from '../../images/pending.png';
 import blocked from '../../images/blocked.png';
 import online from '../../images/online.png';
 import offline from '../../images/offline.png';
+import message from '../../images/message.png';
+import more from '../../images/more.png';
 import { PersonsAttributes } from "../mainSideBar/PersonsAttributes";
 import './tabs.css';
+import { formatMuiErrorMessage } from "@mui/utils";
 
 
 
@@ -42,10 +45,10 @@ export const LeftSideNavigation = () => {
             </PanelTabs>
             
             {/* search bar */}
-          <div className={toggleTab === 2 ? "panel-active relative mx-6 my-4" : "panel-inactive" }>
+          <div className={toggleTab === 2 ? "panel-active-all relative mx-5 my-4" : "panel-inactive" }>
 
-            <div className="absolute top-0 w-full">
-                <div className="flex bg-gray-900 p-1 justify-center items-center rounded-sm w-full">
+            <div className="absolute top-0 w-full ">
+                <div className="mx-1 flex bg-gray-900 p-1 justify-center items-center rounded-sm w-full">
                     <input type="text" placeholder="Search" onChange={(event) => {setSearchTerm(event.target.value)
                     }} className="bg-gray-900  text-sm text-gray-400 outline-none
                     placeholder:text-xs font-bold placeholder:text-gray-350 py-1 px-2 w-full rounded-sm"/>
@@ -54,8 +57,8 @@ export const LeftSideNavigation = () => {
                         <svg className={searchTerm.length !== 0 ? "flex ease-in-out 800ms" : "hidden ease-in-out 800ms "} aria-label="Clear" aria-hidden="false" width="24" height="24" viewBox="0 0 24 24"><path fill="#B9BBBE" d="M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z"></path></svg>
                     </span>
                 </div>
-                <span>
-                    <p className="text-13px font-semibold  py-5 ">ALL FRIENDS - {count}</p>
+                <span className="flex items-end h-full">
+                    <p className="text-13px font-semibold mt-5 ml-2 mb-4">ALL FRIENDS - {count}</p>
                 </span>
             </div>
             
@@ -76,26 +79,36 @@ export const LeftSideNavigation = () => {
             ).map((personI) => {
             
             return (
-                <span  key={personI.id} className='cursor-pointer hover:bg-gray-650 p-2 ease-in-out rounded-md flex justify-between items-center w-full group '>
-                    <div className='flex justify-center items-center'>
-                        <div className="profile relative z-0">
-                            <img src={personI.src} alt={personI.alt} className="avatar-wrapper w-8 h-8 flex justify-center rounded-full">
-                            
-                            </img>
-                            <div className="offline-wrapper absolute top-5 left-5 bg-gray-800 rounded-lg w-4 h-4 flex justify-center items-center">
-                                    <img className="w-10px h-10px" src={offline} alt="offline symbol" />
-                                </div>
-                           
-                        </div>
-                        <span className='ml-3 group-hover:text-gray-400 text-gray-420 text-sm font-semibold'>{personI.text}</span>
-                    </div>
+                <span key={personI.id} className="group rounded-md  flex items-center justify-center cursor-pointer hover:bg-gray-650  ease-in-out  w-full group " >
+                    <span  className="flex justify-between  items-center py-3 w-97 border-t border-zinc-600 h-full" >
+                        <div className='flex justify-center items-center'>
+                            <div className="profile relative z-0">
+                                <img src={personI.src} alt={personI.alt} className="avatar-wrapper w-8 h-8 flex justify-center rounded-full">
                     
-                    <button   datatest= {personI.id} className='mr-1 hidden group-hover:flex '>
-                        <svg  name="svg-name" aria-hidden="false" width="16" height="16" viewBox="0 0 24 24"><path fill="#96989D" d="M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z"></path></svg>
-                    </button>
-                
+                                </img>
+                                <div className="offline-wrapper absolute top-5 left-5 bg-gray-800 rounded-lg w-4 h-4 flex justify-center items-center">
+                                        <img className="w-10px h-10px" src={offline} alt="offline symbol" />
+                                    </div>
+                    
+                            </div>
+                            <div className="flex flex-col  justify-center ml-3">
+                                <div><span className='group-hover:text-gray-400 text-white text-sm font-semibold'>{personI.text}</span><span className="group-hover:inline-flex user-num text-sm font-normal">{personI.number}</span></div>
+                                <span className="text-sm font-normal">{personI.status}</span>
+                            </div>
+                        </div>
+                    
+                        <div className="">
+                            <button className="bg-gray-800 group-hover:bg-gray-900 p-2 rounded-full mr-3">
+                                <img className="w-5" src={message} alt="" />
+                            </button>
+                            <button className="bg-gray-800 group-hover:bg-gray-900 p-2 rounded-full">
+                                <img className="w-5" src={more} alt="" />
+                            </button>
+                        </div>
+                    
+                    </span>
+                    
                 </span>
-                
             )
             }
             )

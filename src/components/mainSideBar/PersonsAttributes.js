@@ -12,7 +12,7 @@ export const PersonsAttributes = [
         src : elmir,
         alt : 'kuya elmir',
         text : 'iambooo3',
-        status : 'offline',
+        status : 'Offline',
         number : '#1111'
     },
     {
@@ -20,7 +20,7 @@ export const PersonsAttributes = [
         src : threesa,
         alt : 'ate thesa',
         text : 'SummerXX',
-        status : 'offline',
+        status : 'Offline',
         number : '#2222'
     },
     {
@@ -28,7 +28,7 @@ export const PersonsAttributes = [
         src : siskaye,
         alt : 'sis kaye',
         text : 'sis kaye',
-        status : 'offline',
+        status : 'Offline',
         number : '#3333'
     },
     {
@@ -36,7 +36,7 @@ export const PersonsAttributes = [
         src : jehoo,
         alt : 'person4',
         text : 'J1hu',
-        status : 'offline',
+        status : 'Offline',
         number : '#4444'
     },
     {
@@ -44,7 +44,7 @@ export const PersonsAttributes = [
         src : sheng,
         alt : 'siang',
         text : 'siang',
-        status : 'offline',
+        status : 'Offline',
         number : '#5454',
     },
     {
@@ -52,7 +52,7 @@ export const PersonsAttributes = [
         src : reven,
         alt : 'kuya raven',
         text : 'ravenpocs',
-        status : 'offline',
+        status : 'Offline',
         number : '#6546',
     },
     {
@@ -60,7 +60,7 @@ export const PersonsAttributes = [
         src : keeng,
         alt : 'ate keng',
         text : 'Sw3as s0ngeristz',
-        status : 'offline',
+        status : 'Offline',
         number : '#7432',
     },
 ]

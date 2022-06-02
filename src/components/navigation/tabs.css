@@ -36,6 +36,19 @@
 
   }
 
+  .panel-active-all {
+    background-color: transparent;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #96989D;
+    font-weight: 300;
+    font-size: 0.95rem;
+    padding-top: 5.5rem;
+
+}
+
   .panel-inactive{
       display: none;
   }

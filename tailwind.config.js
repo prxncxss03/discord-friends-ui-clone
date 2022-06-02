@@ -14,7 +14,9 @@ module.exports = {
         'sidebar-width': '325px',
         '350px' : '358px',
         '420px' : '420px',
+        '97' : '97%',
       },
+      
       fontSize : {
         '13px' : '0.8125rem',
         '15px' : '0.9375rem',

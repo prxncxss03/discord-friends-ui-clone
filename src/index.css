@@ -43,6 +43,10 @@
     @apply mx-2
   }
 
+  .user-num{
+    @apply hidden
+  }
+
   
 
 }
