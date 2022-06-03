@@ -17,6 +17,13 @@ Honestly, Tailwind is easy to learn but writing this project in React was so dif
  
 <!-- <img src="https://user-images.githubusercontent.com/84000523/166895712-fc734fc8-1359-4c5b-9264-bce7f88e9d95.gif" width="300" height="250"/> -->
 
+🎥 ## Demo
+
+https://user-images.githubusercontent.com/84000523/171831983-056b3a4d-776c-4896-af0f-8a993055bf9e.mp4
+
+
+
+
 <!-- ## Features
 ## Screenshots
 ## Realizations --> 
