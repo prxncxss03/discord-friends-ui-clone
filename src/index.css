@@ -5,6 +5,9 @@
 
 @layer components {
   
+  .username-wrapper{
+    @apply bg-gray-900 py-2  border rounded-lg flex justify-center my-2;
+  }
   .sidebar-home{
     @apply relative flex items-center justify-center 
     h-12 w-12 mb-2 mt-2 mx-auto shadow-lg bg-gray-800

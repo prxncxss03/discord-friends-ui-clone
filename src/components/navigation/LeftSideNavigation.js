@@ -17,6 +17,10 @@ export const LeftSideNavigation = () => {
    
     const [toggleTab, settoggleTab] = useState(1);
     const [searchTerm, setSearchTerm] = useState("");
+    const [addFriendInput, setAddFriendInput] = useState("");
+    const [focused, setFocused] = useState(false);
+    const onFocus = () => setFocused(true);
+    const onBlur = () => setFocused(false);
     const [count, setCount] = useState(PersonsAttributes.length);
     const handleToggle = (index) => {
         settoggleTab(index);
@@ -33,7 +37,7 @@ export const LeftSideNavigation = () => {
                     <IndivGrayTabs classTab = {toggleTab === 3 ? "tabs-panel-active " : "tabs-panel-inactive " } onClicky={() => handleToggle(3)} btnText={'Pending'}/>
                     <IndivGrayTabs classTab = {toggleTab === 4 ? "tabs-panel-active " : "tabs-panel-inactive " } onClicky={() => handleToggle(4)} btnText={'Blocked'}/>
                 </div>
-                <AddFriendTab classTab={toggleTab === 5 ? "tabs-panel-active " : "tabs-panel-inactive " } onClicky={()=> handleToggle(5)}  ></AddFriendTab>
+                <AddFriendTab classTab={toggleTab === 5 ? "add-friends-tab-active" : "add-friends-tab-inactive " } onClicky={()=> handleToggle(5)}  ></AddFriendTab>
             </div>
             
             <PanelTabs panelClass={toggleTab === 1 ? "panel-active" : "panel-inactive"} panelImage={online}
@@ -44,7 +48,21 @@ export const LeftSideNavigation = () => {
             <PanelTabs panelClass={toggleTab === 3 ? "panel-active" : "panel-inactive" } panelImage={pending}
              panelText={"There are no pending friend requests. Here's Wumpus for now."} >  
             </PanelTabs>
-            <FriendsTab panelClass={toggleTab === 5 ? "panel-active" : "panel-inactive"}></FriendsTab> 
+            
+            <div className={toggleTab === 5 ? "panel-active-add" : "panel-inactive"}>
+            <div className="w-full py-5 px-8 border-b border-b-gray-600 ">
+                <p className="text-white font-semibold">ADD FRIEND</p>
+                <p className="text-sm py-2 text-gray-400">You can add a friend with their Discord Tag. It's cAsE sEnSitIvE!</p>
+                <div className={focused === true ? 'username-wrapper border-sky-500' : 'username-wrapper border-slate-900'}>
+                    <input  onFocus={onFocus} onBlur={onBlur} className="add-input  p-0 w-70 bg-gray-900 outline-none text-base text-gray-400 placeholder-gray-500"  value={addFriendInput} onChange= {(event) => {setAddFriendInput(event.target.value)}} type="text" placeholder="Enter a Username#0000"/>
+                    <button className={addFriendInput.length > 0 ? "hover:opacity-90 ease-in-out  bg-indigo-600  text-white text-xs py-2 px-3 rounded-sm" : "disabled cursor-not-allowed opacity-90 bg-indigo-900 text-xs py-2 px-3 rounded-sm"}>Send Friend Request</button>
+                </div>
+            </div>
+            <div className="flex flex-col justify-center items-center h-full">
+                <img className="mb-10" src={friends} alt="" />
+                <p>Wumpus is waiting on friends. You don't have to though!</p>
+            </div>
+        </div>
             <PanelTabs panelClass={toggleTab === 4 ? "panel-active" : "panel-inactive" } panelImage={blocked}
              panelText={"You can't unblock the Wumpus."} >
             </PanelTabs>
@@ -188,23 +206,7 @@ const PanelTabs = ({panelText, panelImage, panelClass}) => {
     )
 }
 
-const FriendsTab = ({panelClass}) => {
-    return (
-        <div className={panelClass}>
-            <div className="text-white">
-                <p className="text-white">ADD FRIEND</p>
-                <p>You can add a friend with their Discord Tag. It's cAsE sEnSitIvE!</p>
-                <div className="">
-                    <input type="text" />
-                    <button>Send Friend Request</button>
-                </div>
-            </div>
-            <div>
-                <img src={friends} alt="" />
-            </div>
-        </div>
-    )
-}
+
 // All Panel
 // const AllTop = () => {
 //     return (
