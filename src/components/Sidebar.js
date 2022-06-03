@@ -5,14 +5,23 @@ import arch from '../images/arch.png';
 import dog from '../images/dog.jpeg';
 import perl from '../images/perl.png';
 import spanish from '../images/spanishFlag.png';
-
+import { SidebarShow } from '../helper/Context';
+import { useContext } from 'react';
 
 export const Sidebar = () => {
+    const {sidebarStatus, setSidebarStatus} = useContext(SidebarShow);
+    const sidebarValidate = () => {
+        if (sidebarStatus === true) {
+            setSidebarStatus(false);
+        } else {
+            setSidebarStatus(true);
+        }
+    }
     return (
         <div className="fixed top-0 left-0 h-screen bg-gray-900 m-0
         flex flex-col text-white shadow-lg  w-sicon">
 
-            <SidebarHome icon={<FaDiscord size="30"/>} text={'Home'} />
+            <SidebarHome icon={<FaDiscord size="30"/>} text={'Home'} onClicky={sidebarValidate}/>
             <hr className='sidebar-hr'/>
             <SidebarIcon icon={
                 <SidebarImg src={dog} alt={"Brown Dog"} classN={"sidebar-full-img"}></SidebarImg>
@@ -47,9 +56,9 @@ function SidebarIcon ({icon, text}) {
 
 }
 
-const SidebarHome = ({icon, text}) => {
+const SidebarHome = ({icon, text, onClicky}) => {
     return (
-        <div className="sidebar-home group">
+        <div className="sidebar-home group" onClick={onClicky}>
         {icon}
         <span className="sidebar-tooltip group-hover:scale-100">
             {text}

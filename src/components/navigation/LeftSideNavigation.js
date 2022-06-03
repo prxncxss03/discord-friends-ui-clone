@@ -21,13 +21,13 @@ export const LeftSideNavigation = () => {
     const [focused, setFocused] = useState(false);
     const onFocus = () => setFocused(true);
     const onBlur = () => setFocused(false);
-    const [count, setCount] = useState(PersonsAttributes.length);
+   
     const handleToggle = (index) => {
         settoggleTab(index);
     }
 
     return (
-        <div className="flex flex-col font-medium w-full">
+        <div className="flex flex-col font-medium w-full h-full">
             <div className="flex  shadow-defi  lg:py-2 sm:py-3 items-center">
                 <FriendsText></FriendsText>
                 <div className="lg:bg-gray-600 w-1px py-3 sm:bg-transparent "></div>
@@ -81,7 +81,7 @@ export const LeftSideNavigation = () => {
                     </span>
                 </div>
                 <span className="flex items-end h-full">
-                    <p className="text-13px font-semibold mt-5 ml-2 mb-4">ALL FRIENDS - {count}</p>
+                    <p className="text-13px font-semibold mt-5 ml-2 mb-4">ALL FRIENDS</p>
                 </span>
             </div>
             

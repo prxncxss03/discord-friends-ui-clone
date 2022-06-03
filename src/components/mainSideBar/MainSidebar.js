@@ -1,10 +1,14 @@
 import flag from '../../images/wumpusFlag.png';
 import { DirectMessages  } from './DirectMessages';
 import { BelowProfile } from './BelowProfile';
+import { SidebarShow } from '../../helper/Context';
+import { useContext } from 'react';
 
 export const MainSidebar = () => {
+    const {sidebarStatus, setSidebarStatus} = useContext(SidebarShow);
+    
    return (
-       <div className=" bg-gray-800 pl-2 flex flex-col w-sidebar-width ml-16 h-screen justify-between">
+       <div className={sidebarStatus === true ?  'bg-gray-800 pl-2 flex flex-col w-sidebar-width ml-16 h-screen justify-between transition-all duration-500 ease-linear' : 'w-1 mr-6 transition-all duration-500 ease-linear'}>
            <div>
                <MainSearchBar />
                <MainSelectWrapper mainSelect1={
