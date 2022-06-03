@@ -6,10 +6,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens : {
+        '954': '954px',
+      },
       spacing : {
         
         '1px' : '1px',
         '10px' : '10px',
+        '13' :'13px',
         'sicon': '74px',
         'sidebar-width': '325px',
         '350px' : '358px',
