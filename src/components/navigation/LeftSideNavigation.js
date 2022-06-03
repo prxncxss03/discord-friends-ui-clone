@@ -9,12 +9,14 @@ import more from '../../images/more.png';
 import { PersonsAttributes } from "../mainSideBar/PersonsAttributes";
 import { Tooltipp } from "../Tooltipp";
 import './tabs.css';
+import { SidebarShow } from "../../helper/Context";
+import { useContext } from "react";
 
 
 
 
 export const LeftSideNavigation = () => {
-   
+    const {sidebarStatus, setSidebarStatus} = useContext(SidebarShow);
     const [toggleTab, settoggleTab] = useState(1);
     const [searchTerm, setSearchTerm] = useState("");
     const [addFriendInput, setAddFriendInput] = useState("");
@@ -28,7 +30,7 @@ export const LeftSideNavigation = () => {
 
     return (
         <div className="flex flex-col font-medium w-full h-full">
-            <div className="flex  shadow-defi  lg:py-2 sm:py-3 items-center">
+            <div className={sidebarStatus === true ? "flex  shadow-defi  lg:py-2 sm:py-3 items-center" : "flex  shadow-defi  lg:py-2 sm:py-3 items-center justify-center w-full"}>
                 <FriendsText></FriendsText>
                 <div className="lg:bg-gray-600 w-1px py-3 sm:bg-transparent "></div>
                 <div className="flex items-center ml-2">

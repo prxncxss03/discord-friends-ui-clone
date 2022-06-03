@@ -2,6 +2,8 @@ import offline from '../../images/offline.png';
 import { Tooltipp } from '../Tooltipp';
 import { PersonsAttributes } from './PersonsAttributes';
 import { useState } from 'react';
+import { SidebarShow } from '../../helper/Context';
+import { useContext } from 'react';
 
 export const DirectMessages = () => {
     
@@ -52,8 +54,9 @@ export const DirectMessages = () => {
 }
 
 const DirectMessagesline = () => {
+    const {sidebarStatus, setSidebarStatus} = useContext(SidebarShow);
     return (
-        <div className='text-gray-420 mx-3 mt-3 flex justify-between items-center'>
+        <div className={sidebarStatus === true ? 'text-gray-420 mx-3 mt-3 flex justify-between items-center' : 'hidden'}>
             <span className='text-xs hover:text-gray-400'>DIRECT MESSAGES</span>
             <Tooltipp tooltipTitle='Create DM' tooltipPlacement='top' tooltipChild={
                 <div>

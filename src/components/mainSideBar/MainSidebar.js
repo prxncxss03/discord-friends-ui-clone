@@ -8,7 +8,7 @@ export const MainSidebar = () => {
     const {sidebarStatus, setSidebarStatus} = useContext(SidebarShow);
     
    return (
-       <div className={sidebarStatus === true ?  'bg-gray-800 pl-2 flex flex-col w-sidebar-width ml-16 h-screen justify-between transition-all duration-500 ease-linear' : 'w-1 mr-6 transition-all duration-500 ease-linear'}>
+       <div className={sidebarStatus === true ?  'bg-gray-800 pl-2 flex flex-col w-sidebar-width ml-16 h-screen justify-between transition-all duration-200 ease-linear' : 'w-1 mr-16 transition-all duration-200 ease-linear'}>
            <div>
                <MainSearchBar />
                <MainSelectWrapper mainSelect1={
