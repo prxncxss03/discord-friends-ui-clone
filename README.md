@@ -3,7 +3,7 @@
 ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)  
 ## Not yet finished
-<!-- This is a Discord friends tab UI clone. There's no so much functionalities. Although It's really simple, I have  spent 8 days doing this project after 2 days of learning the basics of react and 13 mins of learning tailwind LOL XD. I have no plans to refactor my code or add additional features to it. 
+This is a Discord friends tab UI clone. There's no so much functionalities. Although It's really simple, I have  spent countless days doing this project after 2 days of learning the basics of react and 13 mins of learning tailwind LOL XD. I have no plans to refactor my code or add additional features to it. 
 
  ## :closed_book: History 
 Originally, I wasn't planning to do this kind of stuff. My plan was to just have an overview of Tailwind so I've tried this almost [13 mins tutorial](https://www.youtube.com/embed/pfaSUYaSgRo) by Fireship. In the end, I enjoyed it so the sidebar was done. However, it was incomplete so I decided to stand on my own feet and do something ~~by myself~~ :x: with the help of  **google** :heavy_check_mark:
