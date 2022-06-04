@@ -55,7 +55,7 @@ export const LeftSideNavigation = () => {
             <div className="w-full py-5 px-8 border-b border-b-gray-600 ">
                 <p className="text-white font-semibold">ADD FRIEND</p>
                 <p className="text-sm py-2 text-gray-400">You can add a friend with their Discord Tag. It's cAsE sEnSitIvE!</p>
-                <div className={focused === true ? 'username-wrapper border-sky-500' : 'username-wrapper border-slate-900'}>
+                <div className={focused === true ? 'username-wrapper  border-sky-500 ' : 'username-wrapper border-slate-900'}>
                     <input  onFocus={onFocus} onBlur={onBlur} className="add-input  p-0 w-70 bg-gray-900 outline-none text-base text-gray-400 placeholder-gray-500"  value={addFriendInput} onChange= {(event) => {setAddFriendInput(event.target.value)}} type="text" placeholder="Enter a Username#0000"/>
                     <button className={addFriendInput.length > 0 ? "hover:opacity-90 ease-in-out  bg-indigo-600  text-white text-xs py-2 px-3 rounded-sm truncate" : "disabled cursor-not-allowed opacity-90 truncate bg-indigo-900 text-xs py-2 px-3 rounded-sm"}>Send Friend Request</button>
                 </div>
