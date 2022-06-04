@@ -1,8 +1,9 @@
 # Discord Friends Tab UI Clone
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)  
-## Not yet finished
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/67dd5fec-b25a-4011-8f99-6332bc0ac27e/deploy-status)](https://app.netlify.com/sites/discord-friends-tab-clone/deploys)
+
 This is a Discord friends tab UI clone. There's no so much functionalities. Although It's really simple, I have  spent countless days doing this project after 2 days of learning the basics of react and 13 mins of learning tailwind LOL XD. I have no plans to refactor my code or add additional features to it. 
 
  ## :closed_book: History 
@@ -19,7 +20,10 @@ Honestly, Tailwind is easy to learn but writing this project in React was so dif
 
 ## 🎥 Demo
 
-https://user-images.githubusercontent.com/84000523/171831983-056b3a4d-776c-4896-af0f-8a993055bf9e.mp4
+https://user-images.githubusercontent.com/84000523/171981950-927b01db-a664-4b3a-8e89-00eb8fc56f37.mp4
+
+
+
 
 
 
