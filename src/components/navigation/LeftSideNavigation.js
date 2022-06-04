@@ -29,7 +29,7 @@ export const LeftSideNavigation = () => {
     }
 
     return (
-        <div className={sidebarStatus === true ? "sm:flex flex-col font-medium w-full h-screen hidden" : "flex flex-col font-medium w-full h-screen"}>
+        <div className={sidebarStatus === true ? "sm:flex flex-col font-medium w-full h-screen hidden" : "sm:flex flex-col font-medium w-full h-screen"}>
             <div className={sidebarStatus === true ? "flex  shadow-defi  lg:py-2 py-3 items-center" : "flex  shadow-defi  lg:py-2 py-3 items-center justify-center w-full "}>
                 <FriendsText></FriendsText>
                 <div className="lg:bg-gray-600 w-1px py-3 sm:bg-transparent "></div>
@@ -51,18 +51,18 @@ export const LeftSideNavigation = () => {
              panelText={"There are no pending friend requests. Here's Wumpus for now."} >  
             </PanelTabs>
             
-            <div className={toggleTab === 5 ? "panel-active-add hidden md:flex ": "panel-inactive hidden md:flex"}>
+            <div className={toggleTab === 5 ? "panel-active-add hidden md:flex h-full": "panel-inactive hidden md:flex h-full"}>
             <div className="w-full py-5 px-8 border-b border-b-gray-600 ">
                 <p className="text-white font-semibold">ADD FRIEND</p>
                 <p className="text-sm py-2 text-gray-400">You can add a friend with their Discord Tag. It's cAsE sEnSitIvE!</p>
                 <div className={focused === true ? 'username-wrapper border-sky-500' : 'username-wrapper border-slate-900'}>
                     <input  onFocus={onFocus} onBlur={onBlur} className="add-input  p-0 w-70 bg-gray-900 outline-none text-base text-gray-400 placeholder-gray-500"  value={addFriendInput} onChange= {(event) => {setAddFriendInput(event.target.value)}} type="text" placeholder="Enter a Username#0000"/>
-                    <button className={addFriendInput.length > 0 ? "hover:opacity-90 ease-in-out  bg-indigo-600  text-white text-xs py-2 px-3 rounded-sm" : "disabled cursor-not-allowed opacity-90 bg-indigo-900 text-xs py-2 px-3 rounded-sm"}>Send Friend Request</button>
+                    <button className={addFriendInput.length > 0 ? "hover:opacity-90 ease-in-out  bg-indigo-600  text-white text-xs py-2 px-3 rounded-sm truncate" : "disabled cursor-not-allowed opacity-90 truncate bg-indigo-900 text-xs py-2 px-3 rounded-sm"}>Send Friend Request</button>
                 </div>
             </div>
             <div className="flex flex-col justify-center items-center h-full">
-                <img className="mb-10" src={friends} alt="" />
-                <p>Wumpus is waiting on friends. You don't have to though!</p>
+                <img className="mb-10 ml-10 hidden sm:block" src={friends} alt="" />
+                <p className="ml-10">Wumpus is waiting on friends. You don't have to though!</p>
             </div>
         </div>
             <PanelTabs panelClass={toggleTab === 4 ? "panel-active hidden md:flex " : "panel-inactive hidden md:flex " } panelImage={blocked}
@@ -200,10 +200,10 @@ const AddFriendTab = ({onClicky,classTab}) => {
 const PanelTabs = ({panelText, panelImage, panelClass}) => {
     return (
         <div className={panelClass}>
-            <span className="mb-12 hidden sm:block">
+            <span className=" mx-10 mb-12 hidden sm:block">
                 <img src={panelImage} alt=""/>
             </span>
-            <p>{panelText}</p>
+            <p className="ml-10">{panelText}</p>
         </div>
     )
 }

@@ -49,7 +49,7 @@ const RightBelowProfile = () => {
 const LeftBelowProfile = ({ alt,src,offline}) => {
     return (
         <div className='flex justify-center items-center'>
-            <div className="flex justify-center items-center over:opacity-80 ease-in-out profile relative z-0">
+            <div className="hidden sm:flex justify-center items-center over:opacity-80 ease-in-out profile relative z-0">
                
                 <img className = "w-8 z-0 rounded-full" src={src} alt={alt} />
                 
