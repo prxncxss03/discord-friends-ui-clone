@@ -20,7 +20,10 @@ Honestly, Tailwind is easy to learn but writing this project in React was so dif
 
 ## 🎥 Demo
 
-https://user-images.githubusercontent.com/84000523/171981950-927b01db-a664-4b3a-8e89-00eb8fc56f37.mp4
+https://user-images.githubusercontent.com/84000523/171985606-ac71a39f-a6a3-4195-9ebb-c57d8e215bc7.mp4
+
+👩🏻‍💻 [Live Demo](https://discord-friends-tab-clone.netlify.app)
+
 
 
 
