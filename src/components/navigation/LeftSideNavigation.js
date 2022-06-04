@@ -200,10 +200,10 @@ const AddFriendTab = ({onClicky,classTab}) => {
 const PanelTabs = ({panelText, panelImage, panelClass}) => {
     return (
         <div className={panelClass}>
-            <span className=" mx-10 mb-12 hidden sm:block">
+            <span className=" mx-10 sm:mx-0 mb-12 hidden sm:block">
                 <img src={panelImage} alt=""/>
             </span>
-            <p className="ml-10">{panelText}</p>
+            <p className="ml-10 sm:ml-0">{panelText}</p>
         </div>
     )
 }
