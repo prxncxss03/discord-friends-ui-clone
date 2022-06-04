@@ -7,7 +7,7 @@ export const RightSideNavigation = () => {
    return (
        <div className={sidebarStatus === true ? "flex-col hidden h-screen sm:flex bg-gray-700" : "flex flex-col h-screen"}>
 
-            <div className="flex justify-end py-3 px-2  shadow-defi">
+            <div className="flex justify-end py-3 px-2  shadow-defi ">
                 <Tooltipp tooltipTitle={'New Group DM'} tooltipPlacement={'bottom'} tooltipChild={
                     <span className="right-icon hidden sm:block">
                         <svg  x="0" y="0"  aria-hidden="false" width="24" height="24" viewBox="0 0 24 24"><path fill="#B9BBBE" fillRule="evenodd"  d="M20.998 0V3H23.998V5H20.998V8H18.998V5H15.998V3H18.998V0H20.998ZM2.99805 20V24L8.33205 20H14.998C16.102 20 16.998 19.103 16.998 18V9C16.998 7.896 16.102 7 14.998 7H1.99805C0.894047 7 -0.00195312 7.896 -0.00195312 9V18C-0.00195312 19.103 0.894047 20 1.99805 20H2.99805Z"></path></svg>

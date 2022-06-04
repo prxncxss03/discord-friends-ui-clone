@@ -30,7 +30,7 @@ export const LeftSideNavigation = () => {
 
     return (
         <div className={sidebarStatus === true ? "sm:flex flex-col font-medium w-full h-screen hidden" : "sm:flex flex-col font-medium w-full h-screen"}>
-            <div className={sidebarStatus === true ? "flex  shadow-defi  lg:py-2 py-3 items-center" : "flex  shadow-defi  lg:py-2 py-3 items-center justify-center w-full "}>
+            <div className={sidebarStatus === true ? "bg-gray-700 flex  shadow-defi  lg:py-2 py-3 items-center " : " flex  shadow-defi  lg:py-2 py-3 items-center justify-center w-full "}>
                 <FriendsText></FriendsText>
                 <div className="lg:bg-gray-600 w-1px py-3 sm:bg-transparent "></div>
                 <div className="flex items-center ml-2">
