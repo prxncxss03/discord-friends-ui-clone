@@ -43,7 +43,7 @@
   }
 
   .right-icon{
-    @apply mx-2;
+    @apply mx-2 cursor-pointer;
   }
 
   .user-num{
