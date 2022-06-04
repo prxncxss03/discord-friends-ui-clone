@@ -6,7 +6,7 @@ import { SidebarShow } from '../../helper/Context';
 import { useContext } from 'react';
 
 export const DirectMessages = () => {
-    
+    const {sidebarStatus, setSidebarStatus} = useContext(SidebarShow);
     const [person, setPerson] = useState(PersonsAttributes);
     let handleRemovePerson = (index) => {
         const newPerson = person;
@@ -21,7 +21,7 @@ export const DirectMessages = () => {
 
                 const avatarName = Math.round(Math.random() * 100);
                 return (
-                    <span  key={personI.id} className='cursor-pointer hover:bg-gray-650 p-2 ease-in-out rounded-md flex justify-between items-center w-full group '>
+                    <span  key={personI.id} className={sidebarStatus === true ? 'cursor-pointer hover:bg-gray-650 p-2 ease-in-out rounded-md flex justify-between items-center w-full group ' : 'hidden'}>
                         
                         <div className='flex justify-center items-center'>
                             <div className="profile relative z-0">
@@ -56,11 +56,11 @@ export const DirectMessages = () => {
 const DirectMessagesline = () => {
     const {sidebarStatus, setSidebarStatus} = useContext(SidebarShow);
     return (
-        <div className='text-gray-420 mx-3 mt-3 flex justify-between items-center'>
+        <div className={sidebarStatus === true ? 'text-gray-420 mx-3 mt-3 flex justify-between items-center':'hidden'}>
             <span className='text-xs hover:text-gray-400'>DIRECT MESSAGES</span>
             <Tooltipp tooltipTitle='Create DM' tooltipPlacement='top' tooltipChild={
                 <div>
-                    <button   className={sidebarStatus === true ? 'text-xl text-gray-400 relative' : 'hidden'}>+</button>
+                    <button   className='text-xl text-gray-400 relative'>+</button>
                 </div>
             }/>   
             

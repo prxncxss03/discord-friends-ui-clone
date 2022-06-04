@@ -5,7 +5,7 @@ import { useContext } from "react";
 export const RightSideNavigation = () => {
     const {sidebarStatus, setSidebarStatus} = useContext(SidebarShow);
    return (
-       <div className={sidebarStatus === true ? "flex-col hidden sm:flex" : "flex flex-col "}>
+       <div className={sidebarStatus === true ? "flex-col hidden h-screen sm:flex bg-gray-700" : "flex flex-col h-screen"}>
 
             <div className="flex justify-end py-3 px-2  shadow-defi">
                 <Tooltipp tooltipTitle={'New Group DM'} tooltipPlacement={'bottom'} tooltipChild={

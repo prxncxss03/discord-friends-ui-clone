@@ -4,10 +4,13 @@ import mute from '../../images/Mute.png';
 import settings from '../../images/Settings.png';
 import deafen from '../../images/deafen2.png';
 import { Tooltipp  } from '../Tooltipp';
+import { useContext } from 'react';
+import { SidebarShow } from '../../helper/Context';
 
 export const BelowProfile = () => {
+    const {sidebarStatus, setSidebarStatus} = useContext(SidebarShow);
     return (
-        <div className='cursor-pointer bg-gray-950 flex justify-between px-2 py-10px'>
+        <div className={sidebarStatus === true ? 'cursor-pointer bg-gray-950 flex justify-between px-2 py-10px' : 'hidden'}>
             <LeftBelowProfile src={princesspix} offline={offline} alt="Princess Pangit na Pic" />
             <RightBelowProfile />
         </div>

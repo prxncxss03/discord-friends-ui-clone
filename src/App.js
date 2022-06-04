@@ -9,7 +9,7 @@ function App() {
   const [sidebarStatus, setSidebarStatus] = useState(true);
   return (
     <SidebarShow.Provider value={{sidebarStatus, setSidebarStatus}}>
-      <div className="App select-none font-radio font-bold flex w-full h-screen  bg-gray-900 justify-between">
+      <div className="bg-gray-700 App select-none font-radio font-bold flex w-full h-screen  justify-between">
       
         <MainSidebar></MainSidebar>
         <Navigation></Navigation>

@@ -52,8 +52,8 @@
   }
 
   .panel-active {
-      background-color: transparent;
-      height: 100%;
+      background-color: #36393f;
+      height: 90%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -65,8 +65,8 @@
   }
 
   .panel-active-add {
-    background-color: transparent;
-    height: 100%;
+    background-color: #36393f;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,8 +77,8 @@
 }
 
   .panel-active-all {
-    background-color: transparent;
-    height: 100%;
+    background-color: #36393f;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
