@@ -8,11 +8,11 @@ export const MainSidebar = () => {
     const {sidebarStatus, setSidebarStatus} = useContext(SidebarShow);
     
    return (
-       <div className={sidebarStatus === true ?  'bg-gray-800 pl-2 flex flex-col w-sidebar-width ml-16 h-screen justify-between transition-all duration-200 ease-linear' : 'w-1 mr-16 transition-all duration-200 ease-linear'}>
+       <div className={sidebarStatus === true ?  'bg-gray-800 pl-2 flex flex-col w-sidebar-width ml-16 h-screen justify-between transition-all duration-200 ease-linear' : ' w-1 mr-16 transition-all duration-200 ease-linear'}>
            <div>
                <MainSearchBar />
                <MainSelectWrapper mainSelect1={
-                <MainSelect icon={<svg
+                <MainSelect icon={<svg 
                             aria-hidden="false" width="24" height="24" viewBox="0 0 24 24">
                             <g fill="none" fillRule="evenodd">
                             <path fill="#fff" fillRule="nonzero"
@@ -55,12 +55,12 @@ const MainSearchBar = () => {
 const MainSelectWrapper = ({mainSelect1,mainSelect2}) => {
     return (
         <div className=" m-2 flex flex-col ">
-            <div className="hover:bg-gray-700 shadow-def m-1px bg-gray-650 text-white rounded-md">
+            <div className="truncate hover:bg-gray-700 shadow-def m-1px bg-gray-650 text-white rounded-md">
                 {mainSelect1}
             </div>
-            <div className="hover:bg-gray-650 flex justify-between text-gray-420 bg-gray-700 rounded-md">
+            <div className="truncate hover:bg-gray-650 flex justify-between text-gray-420 bg-gray-700 rounded-md">
                 {mainSelect2}
-                <img className = "object-contain translate-y-2 mr-2"  src={flag} alt="wumpus flag"/>
+                <img className = "object-contain translate-y-2 mr-2 hidden sm:block"  src={flag} alt="wumpus flag"/>
             </div>
             
         </div>

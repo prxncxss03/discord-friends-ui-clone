@@ -37,7 +37,7 @@ export const DirectMessages = () => {
                                 }/>  
                                 
                             </div>
-                            <span className='ml-3 group-hover:text-gray-400 text-gray-420 text-sm font-semibold'>{personI.text}</span>
+                            <span className='ml-3 group-hover:text-gray-400 text-gray-420 text-sm font-semibold truncate'>{personI.text}</span>
                         </div>
                         
                         <button  onClick={()=> handleRemovePerson(index)} datatest= {personI.id} className='mr-1 hidden group-hover:flex '>
@@ -56,11 +56,11 @@ export const DirectMessages = () => {
 const DirectMessagesline = () => {
     const {sidebarStatus, setSidebarStatus} = useContext(SidebarShow);
     return (
-        <div className={sidebarStatus === true ? 'text-gray-420 mx-3 mt-3 flex justify-between items-center' : 'hidden'}>
+        <div className='text-gray-420 mx-3 mt-3 flex justify-between items-center'>
             <span className='text-xs hover:text-gray-400'>DIRECT MESSAGES</span>
             <Tooltipp tooltipTitle='Create DM' tooltipPlacement='top' tooltipChild={
                 <div>
-                    <button   className='text-xl text-gray-400 relative'>+</button>
+                    <button   className={sidebarStatus === true ? 'text-xl text-gray-400 relative' : 'hidden'}>+</button>
                 </div>
             }/>   
             
