@@ -13,11 +13,15 @@ module.exports = {
         '10px' : '10px',
         '13' :'13px',
         'sicon': '74px',
-        'sidebar-width': '325px',
+        
         '350px' : '358px',
         '420px' : '420px',
         '97' : '97%',
         '70' : '70%',
+      },
+      width: {
+        '1400': '1400px',
+        'sidebar-width': '325px',
       },
       
       fontSize : {
